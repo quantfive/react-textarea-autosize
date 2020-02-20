@@ -59,7 +59,7 @@ export default function calculateNodeHeight(
   minRows = null,
   maxRows = null,
 ) {
-  if (hiddenTextarea.parentNode === null) {
+  if (!document.body.contains(hiddenTextarea)) {
     document.body.appendChild(hiddenTextarea);
   }
 
